@@ -721,13 +721,44 @@ footer {
 .close {
     color: white;
     position: fixed;
-    right: 2rem;
-    top: 2rem;
-    font-size: 2rem;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
     z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-cancel-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-cancel-btn:hover {
+    background: white;
+    color: var(--deep-purple);
 }
 
 /* Kit Form Overrides */
