@@ -719,46 +719,31 @@ footer {
 }
 
 .close {
-    color: white;
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-    z-index: 1001;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
-.close:hover {
-    background: rgba(0, 0, 0, 0.8);
+    display: none;
 }
 
 .modal-cancel-btn {
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    border-radius: 25px;
-    font-family: 'Inconsolata', monospace;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+    display: none;
 }
 
-.modal-cancel-btn:hover {
-    background: white;
-    color: var(--deep-purple);
+/* Compact form styling */
+.formkit-form {
+    padding: 1.5rem !important;
+}
+
+.formkit-form .formkit-header h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.formkit-form .formkit-subheader p {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.formkit-form .formkit-guarantee {
+    font-size: 0.75rem !important;
+    margin-top: 0.75rem !important;
 }
 
 /* Kit Form Overrides */
@@ -783,6 +768,20 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .modal-cancel-btn {
+        display: block;
+        margin-top: 1rem;
+        padding: 0.8rem 2rem;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        border-radius: 25px;
+        font-family: 'Inconsolata', monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
     .modal-content {
         margin: 10% 0.5rem;
         padding: 1rem;
