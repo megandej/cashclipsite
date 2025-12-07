@@ -98,6 +98,11 @@ nav a:hover {
     box-shadow: 0 8px 25px rgba(127, 216, 190, 0.4);
 }
 
+.cta-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--electric-purple) 0%, var(--violet-glow) 40%, var(--coral) 100%);
@@ -719,7 +724,27 @@ footer {
 }
 
 .close {
-    display: none;
+    color: white;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .modal-cancel-btn {
@@ -768,23 +793,32 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .close {
+        display: flex;
+        right: 0.5rem;
+        top: 0.5rem;
+        font-size: 2.2rem;
+        width: 38px;
+        height: 38px;
+    }
+
     .modal-cancel-btn {
         display: block;
-        margin-top: 1rem;
-        padding: 0.8rem 2rem;
+        margin-top: 0.75rem;
+        padding: 0.6rem 1.5rem;
         background: transparent;
         border: 2px solid white;
         color: white;
         border-radius: 25px;
         font-family: 'Inconsolata', monospace;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 600;
         cursor: pointer;
     }
 
     .modal-content {
-        margin: 10% 0.5rem;
-        padding: 1rem;
+        margin: 5% 0.5rem;
+        padding: 0.5rem;
         width: 95%;
         max-width: 100%;
     }
@@ -794,13 +828,25 @@ footer {
     }
 
     .formkit-form {
-        padding: 1rem !important;
+        padding: 0.75rem !important;
         max-width: 100% !important;
         width: 100% !important;
     }
 
     .formkit-form .formkit-header h2 {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem !important;
+        margin: 0 0 0.5rem 0 !important;
+    }
+
+    .formkit-form .formkit-subheader p {
+        font-size: 0.85rem !important;
+        margin: 0 0 0.75rem 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    .formkit-form .formkit-guarantee {
+        font-size: 0.7rem !important;
+        margin-top: 0.5rem !important;
     }
 
     .formkit-form .formkit-fields {
@@ -905,5 +951,9 @@ footer {
     .logo img {
         height: 64px;
     }
+}
+
+.btn-primary, .btn-secondary, .cta-button, .formkit-submit {
+    font-family: 'Inconsolata', monospace !important;
 }
 
